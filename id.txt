@@ -1,0 +1,2 @@
+use printcore as python  seems ez
+or multi args in rponsole -e [...] (no load... just filename) 

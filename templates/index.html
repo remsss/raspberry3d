@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>remi's pi</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}" />
+        
+    </head>
+
+    <body>
+        <figure class="image">
+            <a href="{{ url_for('static',filename='monfichier.jpg') }}">
+            <img
+                src="{{ url_for('static',filename='monfichier.jpg') }}"
+            />
+            </a>
+          </figure>
+
+        <div class="allButtons grid-container">
+            <div class="grid-item1">
+                <form>
+                    <input class="input1", type="button" value="refresh picture" onclick="modifyImg()">
+                </form>
+            </div>
+            <div class="grid-item1">
+                <form>
+                    <input class="input1", type="button" value="CPU's temp" onclick="CPUTemp()">
+                </form>
+            </div>
+            <div class="grid-item1">
+                <form>
+                    <input class="input1", type="button" value="shutdown the website" onclick="shutdownSite()">
+                </form>
+            </div>  
+            <div class="grid-item1">
+                <form>
+                    <input class="input1", type="button" value="Stop Printing" onclick="StopPrint()">
+                </form>
+            </div>
+            <div class="grid-item2">
+                <form action='/api', method="post", enctype="multipart/form-data">
+                    <input type="file" name="file", id="file">
+<br/>
+		    <input type="submit">
+                </form>
+            </div>
+            <div class="grid-item1">
+                <form>
+                    <input class="input1", type="button" value="print" onclick="pprint()">
+                </form>
+            </div>  
+            <div class="grid-item1">
+                <form>
+                    <input class="input1", type="button" value="shutdown" onclick="myFunction(7)">
+                </form>
+            </div>
+            <div class="grid-item1">
+                <form>
+                    <input class="input1", type="button" value="shutdown" onclick="myFunction(8)">
+                </form>
+            </div>
+            <div class="grid-item1">
+                <form>
+                    <input class="input1", type="button" value="shutdown" onclick="myFunction(9)">
+                </form>
+            </div>  
+          </div>
+          
+          <script src="{{ url_for('static',filename='script.js') }}"></script>
+    </body>
+</html>
+
+
+        
